@@ -1,0 +1,65 @@
+---
+title       : Predicting Coronary heart disease  
+subtitle    : a simple shiny apps 
+author      : ZL
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Background
+
+Coronary heart disease (CHD) is a narrowing of the small blood vessels that supply blood and oxygen to the heart. CHD is also called coronary artery disease.
+
+Coronary heart disease is caused by the buildup of plaque in the arteries to your heart. This may also be called hardening of the arteries.
+
+  1. Fatty material and other substances form a plaque buildup on the walls of your coronary arteries.
+  2. This buildup causes the arteries to get narrow.
+  3. As a result, blood flow to the heart can slow down or stop.
+
+A risk factor for heart disease is something that increases your chance of getting it. You cannot change some risk factors for heart disease, but you can change others. 
+
+
+
+--- .class #id
+
+## What an application provides
+
+In order to help user to evaluate their risk of developing coronary heart disease and to ubderstand how to reduce the risk, I have developed this shiny app that allows the user to do the following through Shiny's easy to use user interface controls.
+
+1. Perform an easy self evaluation based on some fact
+2. Risk assesment 
+3. Understand what life style that can reduce the risk
+
+
+--- .class #id 
+
+## How it works
+1. This apps use the SAheart data set from the R package.
+2. A multi variable glm model was build using featobacco, ldl, alcohol and age features.
+3. user input of tobacco, ldl, alcohol and age was obtained through shiny user interface.
+4. model prediction was performed at the server side and result printed in the interface.
+
+--- .class #id 
+
+## How it works, continued
+
+2D plot of CHD risk and tobacco, ldl, alcohol and age from the SAheart data set.
+
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+
+--- .class #id 
+
+## How it works, continued
+The user interface:
+User can input their tobacco, ldl, alcohol and age data in the left panel, the apps will then  grab the data and perform a model fitting in the server and retern the result and print on the right panel.
+
+<div style='text-align: center;'>
+    <img height='400' src='slidify.png' />
+</div>
+
+
